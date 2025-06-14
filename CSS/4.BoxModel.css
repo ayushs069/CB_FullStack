@@ -1,0 +1,21 @@
+/* design block ele */
+div{
+    height: 100px; 
+    width: 100px;
+    background-color: bisque;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 30px;
+}
+
+
+/* design inline ele  */
+span{
+    height: 100px; 
+    width: 100px;
+    background-color: aquamarine;
+    margin: 100px;
+    padding: 100px;
+    /* display: block;  ---- next span comes below first following box model */ 
+     display: inline-block; /*--- next span comes to right of first following both inline and box model */
+}
