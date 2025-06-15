@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background-color: black;
+}
+
+div{
+    color: white;
+    font-size: 24px;
+}
+
+button{
+    font-size: 24px;
+}
+
+div > ul{
+    list-style: none;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:768px) {
+    nav , div > ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav{
+        padding: 12px;
+    }
+
+    ul{
+        margin: 12px auto;
+        padding: 12px;
+    }
+    
+}
