@@ -282,7 +282,7 @@
 //Remove elements from DOM - remove and removeChild
 
 // 1.  parent.removeChild(tag)
-const strong = document.querySelector("strong"); //ACCESS
+// const strong = document.querySelector("strong"); //ACCESS
 
 
 // const para = document.querySelector("p"); // CREATED
