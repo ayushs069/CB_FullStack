@@ -179,32 +179,32 @@
 // classList has all the CSS classes that can be added to the h1
 
 // .heading-class can be put directly in html but we have to do it with the DOM manipulation
-const h1 = document.getElementById("heading");
+// const h1 = document.getElementById("heading");
 
 
 
 //using classList
-h1.classList.add("heading-class"); 
+// h1.classList.add("heading-class"); 
 //Hence added external CSS by DOM manipultion in h1
 
 //another class added
-h1.classList.add("one");
+// h1.classList.add("one");
 
 
 
 
 //removing a class
-h1.classList.remove("heading-class");
+// h1.classList.remove("heading-class");
 
 
 
 
 //toggle the classes (add - remove)
-h1.classList.toggle("heading-class"); // added
+// h1.classList.toggle("heading-class"); // added
 
-h1.classList.toggle("heading-class"); // removed
+// h1.classList.toggle("heading-class"); // removed
 
-h1.classList.toggle("heading-class"); // added
+// h1.classList.toggle("heading-class"); // added
 
 // & so on....................................
 
@@ -212,8 +212,88 @@ h1.classList.toggle("heading-class"); // added
 
 
 // contains functon
-console.log(h1.classList.contains("one"));  // true
+// console.log(h1.classList.contains("one"));  // true
 
-console.log(h1.classList.contains("ten"));  // false
+// console.log(h1.classList.contains("ten"));  // false
 
-//
+
+
+
+
+// Attributes - setAttribute(),getAttribute() - Used to set the value of an attribute or get its value
+// const inp = document.querySelector("input");
+// console.log(inp); 
+
+// // 1.getAttribute
+// console.log(inp.getAttribute('type')); // returns 'text'
+// console.log(inp.getAttribute('name')); // returns 'username'
+
+// console.log(inp.getAttribute('id'));  // returns null - as its not present
+
+
+
+// 2. setAttribute
+// inp.setAttribute('type','date');
+
+// inp.setAttribute('type', 'time');
+
+// inp.setAttribute('type', 'color');
+
+// inp.setAttribute('type', 'password');
+
+
+// Changing image
+// const image = document.querySelector("img");
+// image.setAttribute("src","https://plus.unsplash.com/premium_photo-1749735100764-c6d8aab144af?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8");
+
+// attribute is present in html
+// property is in the javaScript DOM 
+
+
+
+
+// Creating & adding Elements in DOM - document.createElement('nameOfTheTag')
+// const strong = document.createElement("strong");
+// console.log(strong);
+
+// strong.innerText = "This is a new strong text";
+
+// // adding it to the end of paragraph 
+// const para = document.querySelector("p"); //selecting the para
+
+// 1. parent.appendChild('createdTag') //appends only html element
+// para.appendChild(strong);
+
+// 2. parent.append(createdTag) // appends element and any text
+// para.append(strong);
+
+// para.append("HOW R U!!!!!!!!!!!");
+
+// // 3.parent.prepend(Tag)
+// para.prepend("HELOOOOOOOOO");
+
+// const span = document.createElement("span");
+// span.innerText="THIS IS A DYNAMIC SPAN";
+
+// para.prepend(span);
+
+
+
+//Remove elements from DOM - remove and removeChild
+
+// 1.  parent.removeChild(tag)
+const strong = document.querySelector("strong"); //ACCESS
+
+
+// const para = document.querySelector("p"); // CREATED
+
+// para.removeChild(strong);
+
+
+// 2. tag.remove() --- easy
+// strong.remove();
+
+// const h1 = document.querySelector("h1"); // CREATED
+// h1.remove();
+
+
