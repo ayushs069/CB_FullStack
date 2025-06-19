@@ -1,0 +1,11 @@
+.one{
+    color: red;
+    background-color: aquamarine;
+    border:  3px solid brown;
+}
+
+.two{
+    text-decoration: line-through;
+    text-transform: uppercase;
+    font-style: italic;
+}
