@@ -1,0 +1,5 @@
+We are learning file system in Node.js!
+Wrote something other over here !  
+New data again !@@@
+sayonara
+heluuuuu
