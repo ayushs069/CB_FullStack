@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 340px;
+    border: 2px solid black;
+    margin: 50px auto;
+}
+
+#plus{
+    float :right;
+    cursor: pointer;
+}
+
+#inp{
+    box-sizing: border-box;
+    border : 1px solid rgb(211, 205, 205);
+    width: 100%;
+    font-size: 24px;
+    outline: none; 
+    padding: 5px ;
+    background-color: rgb(228, 226, 225) ;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    background-color: rgb(188, 26, 14) ;
+    color: white;
+    padding: 8px ;
+    border: 0.5px solid black;
+}
+
+
+li{
+    border: 1px solid #ccc;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.26);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 5px ;
+    vertical-align: middle;
+    background-color: rgb(219, 227, 117);
+    cursor: pointer;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.completed{
+    color: grey;
+    text-decoration: line-through;
+}
+
+.delete-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

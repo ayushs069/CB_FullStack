@@ -1,0 +1,37 @@
+/* element selecyor */
+h1{
+    font-size: 50px;
+    color: red;
+    background-color: yellow;
+}
+
+/* id selector - unique (1 for 1 element) but can be done for multiple too ,so dont use it for mul*/
+#singh{
+    font-size: 30px;
+    color: purple;
+    background-color: aquamarine;
+
+}
+
+/* class selector - multiple (can be given to different elements at once */
+.ayush{
+    font-size: 66px;
+    color: rgb(70, 0, 128);
+    background-color: rgb(163, 98, 52);
+}
+
+/* attribute selector */
+input[type="password"]{
+    background-color: blueviolet;
+    color: chocolate;
+}
+
+a[href="https://online.codingblocks.com/app/player/327358/content/333542/20190/lecture"]{
+    background-color: crimson;
+    color:white;
+}
+
+/* universal selector */
+*{
+    border: 2px solid black;
+}
