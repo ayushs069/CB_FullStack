@@ -1,0 +1,1 @@
+console.log("WOWWWW static worked")
