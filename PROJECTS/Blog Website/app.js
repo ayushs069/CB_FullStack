@@ -13,7 +13,7 @@ hbs.registerPartials(path.join(__dirname,'views','partials'));
 const routeHandler = require('./routes/blogsRoute');
 app.use('/',routeHandler);
 
-mongoose.connect('mongodb+srv://ayushsingh:singhayush@ayushsingh.oqzzvso.mongodb.net/myBlogs?retryWrites=true&w=majority&appName=AyushSingh')
+mongoose.connect('mongodb+srv://ayushsingh:<db_PWD>@ayushsingh.oqzzvso.mongodb.net/myBlogs?retryWrites=true&w=majority&appName=AyushSingh')
     .then(()=>{
         app.listen(PORT,()=>{
             console.log(`http://localhost:${PORT}`);
