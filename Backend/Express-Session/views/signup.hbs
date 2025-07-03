@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    {{#if msg}}
+        <div class="msg"> 
+            {{msg}}
+        </div>
+    {{/if}}
+
+    <div class="container">
+        <h1 class="heading">Signup page</h1>
+        <form action="/signup" method="post">
+            <input type="text" name="username" placeholder="Enter username" required>
+            <input type="password" name="password" placeholder="Enter password" required>
+            <button type="submit" class="btn">Signup</button>
+        </form>
+        <div class="redirect">
+            Already a user? <button><a href="/login">Login</a></button>
+        </div>
+    </div>
+</body>
+</html>
+{{! This is the signup page template. It includes a form for users to enter their username and password. }}
+{{! If there is a message (like an error), it will be displayed at the top of the page. }}
+{{! The form submits to the /signup route using POST method. }}
+{{! There is also a button to redirect to the login page for existing users. }}
