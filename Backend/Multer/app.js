@@ -7,8 +7,6 @@ const app = express();
 const multer = require('multer');
 const PORT = 4444;
 const cloudinary = require('cloudinary').v2; // taking v2 object of cloudinary
-const DatauriParser = require('datauri/parser'); // DatauriParser is used to convert file buffer to data URI
-const parser = new DatauriParser();
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
@@ -38,11 +36,8 @@ fileFilter = (req, file, cb)=> {
 
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({ extended: true })); 
-
 // app.use(multer({ dest: 'images' }).single('image'));
-// app.use(multer({ storage,fileFilter }).single('image'));
-app.use(multer({}).single('image'));   // to uplaod image directly to cloudinary
-
+app.use(multer({ storage,fileFilter }).single('image'));
 
 
 
@@ -51,16 +46,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    // const {title, desc} = req.body;
-    // console.log(title, desc);
+    const {title, desc} = req.body;
+    console.log(title, desc);
     // console.log(req.file); // This will log the file information(path)
-
-    const ext = path.extname(req.file.originalname);        // Extracting the file extension from the original file name
-    const fileUri = parser.format(ext, req.file.buffer);     // Converting the file buffer to data URI format
-    cloudinary.uploader.upload(`${fileUri.content}`, (error, result)=>{
+    cloudinary.uploader.upload(`${req.file.path}`, (error, result)=>{
         console.log(result, error);
-        res.send("File uploaded successfully on cloudinary");
     });
+
+    res.send("OK");
 });
 
 app.listen(PORT, () => {
